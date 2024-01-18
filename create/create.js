@@ -117,7 +117,9 @@ async function onEncrypt() {
   const useRandomIv = document.querySelector("#iv").checked;
   const useRandomSalt = document.querySelector("#salt").checked;
 
-  const hint = document.querySelector("#hint").value
+ // const hint = document.querySelector("#hint").value
+  let hint = document.querySelector("#hint").value;
+  hint = hint.trim() === "" ? "Enter the 5 Digit Number" : hint;
 
   const encrypted = await generateFragment(url, password, hint, useRandomSalt,
       useRandomIv);
