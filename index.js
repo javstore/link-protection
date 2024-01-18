@@ -78,11 +78,11 @@ function main() {
 
         // Set the "decrypt without redirect" URL appropriately
         document.querySelector("#no-redirect").href =
-          `https://jstrieb.github.io/link-lock/decrypt/#${hash}`;
+          `https://javstore.github.io/link-protection/decrypt/#${hash}`;
 
         // Set the "create hidden bookmark" URL appropriately
         document.querySelector("#hidden").href =
-          `https://jstrieb.github.io/link-lock/hidden/#${hash}`;
+          `https://javstore.github.io/link-protection/hidden/#${hash}`;
         return;
       }
 
