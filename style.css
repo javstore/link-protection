@@ -205,7 +205,7 @@ code {
   margin-right: 5px;
   cursor: pointer;
   display: inline-block;
-  margin: auto;
+/*  margin: auto; */
   text-align: center;
 }
 
