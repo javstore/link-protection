@@ -127,7 +127,7 @@ async function onEncrypt() {
   highlight("output");
 
   // Adjust "Hidden Bookmark" link
-  document.querySelector("#bookmark").href = `https://javstore.github.io/link-protection/hidden/#${encrypted}`;
+//  document.querySelector("#bookmark").href = `https://javstore.github.io/link-protection/hidden/#${encrypted}`;
 
   // Adjust "Open in New Tab" link
   document.querySelector("#open").href = output;
