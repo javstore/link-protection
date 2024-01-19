@@ -120,6 +120,16 @@ code {
   right: 0;
 }
 
+@media (min-width: 100ch) {
+  .ribbon {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100px; /* Limit the height */
+    top: 10px; /* Adjust the top position */
+    right: 10px; /* Adjust the right position */
+  }
+}
+
 
 /* Error area */
 .red-border {
