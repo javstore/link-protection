@@ -125,8 +125,8 @@ code {
     width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
     max-height: 100px; /* Limit the height */
-    top: 20px; /* Adjust the top position */
-    right: 20px; /* Adjust the right position */
+    top: 2px; /* Adjust the top position */
+    right: 2px; /* Adjust the right position */
   }
 }
 
