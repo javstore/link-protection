@@ -122,7 +122,7 @@ code {
 
 @media (min-width: 100ch) {
   .ribbon {
-    width: 50px; /* Adjust the width as needed */
+    width: 80px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
     max-height: 100px; /* Limit the height */
     top: 10px; /* Adjust the top position */
