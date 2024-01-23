@@ -55,8 +55,15 @@ function main() {
     let hint, password;
     if ("h" in params) {
       hint = params["h"];
-      document.querySelector("#hint").innerText = "Hint: " + hint;
+      const hintElement = document.querySelector("#hint");
+
+      // Check if the hint contains a URL and convert it to a hyperlink
+      const urlRegex = /(https?|ftp):\/\/[^\s/$.?#].[^\s]*/i;
+      const formattedHint = hint.replace(urlRegex, '<a href="$&" target="_blank">$&</a>');
+
+      hintElement.innerHTML = "Hint: " + formattedHint;
     }
+
 
     const unlockButton = document.querySelector("#unlockbutton");
     const passwordPrompt = document.querySelector("#password");
