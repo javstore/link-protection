@@ -122,9 +122,10 @@ async function onEncrypt() {
   hint = hint.trim() === "" ? "Enter the 5 Digit Number" : hint;
 
   // Check if the hint contains a URL and convert it to a hyperlink
-  const urlRegex = /(https?|ftp):\/\/[^\s/$.?#].[^\s]*/i;
-  hint = hint.replace(urlRegex, '<a href="$&" target="_blank">$&</a>');
-
+  const isURL = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i.test(hint);
+  if (isURL) {
+      hint = `<a href="${hint}" target="_blank">${hint}</a>`;
+  }
 
   const encrypted = await generateFragment(url, password, hint, useRandomSalt,
       useRandomIv);
