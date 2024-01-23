@@ -121,13 +121,6 @@ async function onEncrypt() {
   let hint = document.querySelector("#hint").value;
   hint = hint.trim() === "" ? "Enter the 5 Digit Number" : hint;
 
-  // Check if the hint contains a URL and convert it to a hyperlink
-  const urlRegex = /(https?|ftp):\/\/[^\s/$.?#].[^\s]*/i;
-  hint = hint.replace(urlRegex, '<a href="$&" target="_blank">$&</a>');
-
-  // Display the formatted hint in the #hint paragraph
-  document.querySelector("#hint").innerHTML = `Hint: ${hint}`;
-
   const encrypted = await generateFragment(url, password, hint, useRandomSalt,
       useRandomIv);
   const output = `https://javstore.github.io/link-protection/#${encrypted}`;
