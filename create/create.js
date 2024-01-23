@@ -125,6 +125,8 @@ async function onEncrypt() {
   const urlRegex = /(https?|ftp):\/\/[^\s/$.?#].[^\s]*/i;
   hint = hint.replace(urlRegex, '<a href="$&" target="_blank">$&</a>');
 
+  // Display the formatted hint in the #hint paragraph
+  document.querySelector("#hint").innerHTML = `Hint: ${hint}`;
 
   const encrypted = await generateFragment(url, password, hint, useRandomSalt,
       useRandomIv);
