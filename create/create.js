@@ -117,9 +117,14 @@ async function onEncrypt() {
   const useRandomIv = document.querySelector("#iv").checked;
   const useRandomSalt = document.querySelector("#salt").checked;
 
- // const hint = document.querySelector("#hint").value
+   // const hint = document.querySelector("#hint").value
   let hint = document.querySelector("#hint").value;
   hint = hint.trim() === "" ? "Enter the 5 Digit Number" : hint;
+
+  // Check if the hint contains a URL and convert it to a hyperlink
+  const urlRegex = /(https?|ftp):\/\/[^\s/$.?#].[^\s]*/i;
+  hint = hint.replace(urlRegex, '<a href="$&" target="_blank">$&</a>');
+
 
   const encrypted = await generateFragment(url, password, hint, useRandomSalt,
       useRandomIv);
