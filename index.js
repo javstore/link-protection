@@ -62,7 +62,7 @@ function main() {
       const formattedHint = hint.replace(urlRegex, '<a href="$&" target="_blank">$&</a>');
 
       // Print "the url is :" if the hint is a URL, otherwise print "Hint:"
-      hintElement.innerHTML = urlRegex.test(hint) ? "Watch Video to Get Password 🔑: " + formattedHint + '<br><br>' : "Hint: " + formattedHint;
+      hintElement.innerHTML = urlRegex.test(hint) ? "Watch Video to Get Password 🔑:<br>" + formattedHint : "Hint: " + formattedHint;
     }
 
 
