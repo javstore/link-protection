@@ -61,9 +61,8 @@ function main() {
       const urlRegex = /(https?|ftp):\/\/[^\s/$.?#].[^\s]*/i;
       const formattedHint = hint.replace(urlRegex, '<a href="$&" target="_blank">$&</a>');
 
-      hintElement.innerHTML = "Hint: " + formattedHint;
+      hintElement.innerHTML = isURL ? "Watch Video to get Password" : "Hint: " + hint;
     }
-
 
     const unlockButton = document.querySelector("#unlockbutton");
     const passwordPrompt = document.querySelector("#password");
