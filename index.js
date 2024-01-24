@@ -57,13 +57,13 @@ function main() {
       hint = params["h"];
       const hintElement = document.querySelector("#hint");
 
-      // Check if the hint contains a URL
+      // Check if the hint contains a URL and convert it to a hyperlink
       const urlRegex = /(https?|ftp):\/\/[^\s/$.?#].[^\s]*/i;
-      const isURL = urlRegex.test(hint);
+      const formattedHint = hint.replace(urlRegex, '<a href="$&" target="_blank">$&</a>');
 
-      // Display appropriate label based on whether it's a URL or not
-      hintElement.innerHTML = isURL ? "Watch Video to get Password" : "Hint: " + hint;
+      hintElement.innerHTML = "Hint: " + formattedHint;
     }
+
 
 
     const unlockButton = document.querySelector("#unlockbutton");
