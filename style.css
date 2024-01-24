@@ -8,6 +8,21 @@
  * Element styles
  ******************************************************************************/
 
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Ensure the logo doesn't exceed the viewport width */
+}
+
+@media (min-width: 100ch) {
+  .logo {
+    max-width: 80%; /* Adjust the max-width as needed */
+    margin-top: 20px; /* Adjust the top margin as needed */
+  }
+}
+
+
+
 html {
   font-family: sans-serif;
   padding: 10px;
