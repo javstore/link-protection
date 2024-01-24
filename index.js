@@ -61,8 +61,10 @@ function main() {
       const urlRegex = /(https?|ftp):\/\/[^\s/$.?#].[^\s]*/i;
       const formattedHint = hint.replace(urlRegex, '<a href="$&" target="_blank">$&</a>');
 
-      hintElement.innerHTML = "Hint: " + formattedHint;
+      // Print "the url is :" if the hint is a URL, otherwise print "Hint:"
+      hintElement.innerHTML = urlRegex.test(hint) ? "the url is: " + formattedHint : "Hint: " + formattedHint;
     }
+
 
 
 
