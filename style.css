@@ -8,18 +8,17 @@
  * Element styles
  ******************************************************************************/
 
-/* CSS for centering and resizing the logo */
+/* CSS for centering and resizing the logo at the top */
 .logo {
   display: block;
   margin: 0 auto;
-  max-width: 50%; /* Adjust the max-width to make the logo smaller */
+  max-width: 80%; /* Adjust the max-width as needed */
   height: auto;
 }
 
 @media (min-width: 100ch) {
   .logo {
-    max-width: 40%; /* Adjust the max-width for larger screens */
-    margin-top: 20px; /* Adjust the top margin as needed */
+    max-width: 70%; /* Adjust the max-width for larger screens */
   }
 }
 
